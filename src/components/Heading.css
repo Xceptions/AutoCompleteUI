@@ -2,5 +2,7 @@
 
 .headingBox {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    text-align: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }

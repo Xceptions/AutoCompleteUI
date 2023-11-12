@@ -1,0 +1,8 @@
+.resultContainer {
+    background-color: #eee;
+    height: 200px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}

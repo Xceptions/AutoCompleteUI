@@ -1,22 +1,31 @@
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 import { TextField } from "@mui/material";
 
 // import "./TrainInput.css";
 
 function TrainInput() {
   return (
-    <>
-      <h3>Input train data</h3>
+    <Box
+      sx={{
+        maxWidth: "1000px",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    >
       <TextField
         id="outlined-multiline-static"
-        label="Multiline"
+        label="paste input here and hit train"
         multiline
-        rows={4}
-        defaultValue="Default Value"
+        rows={10}
+        fullWidth
+        // defaultValue="Input text"
+        placeholder=""
       />
       <br />
-      <Button variant="contained">Hello world</Button>
-    </>
+      <br />
+      <Button variant="contained">train</Button>
+    </Box>
   );
 }
 
