@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 .resultContainer {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     background-color: #eee;
     height: 200px;
     max-width: 1000px;

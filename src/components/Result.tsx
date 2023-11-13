@@ -5,7 +5,6 @@ import "./Result.css";
 function Result() {
   return (
     <Box className="resultContainer">
-      {/* <h1>The result</h1> */}
       <ResultCard />
     </Box>
   );
