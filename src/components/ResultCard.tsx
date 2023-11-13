@@ -5,10 +5,12 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { TextField } from "@mui/material";
+import DisplayPrediction from "./DisplayPrediction";
 import "./ResultCard.css";
 
 export default function ResultCard() {
   const [wordToComplete, setWordToComplete] = useState("");
+  const [prediction, setPrediction] = useState("");
 
   const onWordToCompleteChange = (e) => setWordToComplete(e.target.value);
 
@@ -23,6 +25,7 @@ export default function ResultCard() {
       })
       .then(function (result) {
         console.log(JSON.stringify(result));
+        setPrediction(result["result"]);
       })
       .catch((err) => {
         console.log(err.message);
@@ -52,8 +55,9 @@ export default function ResultCard() {
           </Button>
         </CardActions>
       </Card>
-      <p>Prediction: </p>
-      {wordToComplete}
+      {prediction && (
+        <DisplayPrediction prediction={prediction}></DisplayPrediction>
+      )}
     </>
   );
 }
